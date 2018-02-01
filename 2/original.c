@@ -9,12 +9,18 @@ int main(void) {
 
 	P2->SEL1 &= ~1;
 	P2->SEL0 &= ~1;
-	P2->DIR |= 1;
+	// GREEN 0x02
+	// BLUE 0x04
+	P2->DIR |= 0x02;
 
 	while(1) {
 		if (P1->IN & 2)
-			P2->OUT &= ~1;
+			// GREEN 0x02
+			// BLUE 0x04
+			P2->OUT &= ~0x02;
 		else
-			P2->OUT |= 1;
+			// GREEN 0x02
+			// BLUE 0x04
+			P2->OUT |= 0x02;
 	}
 }
