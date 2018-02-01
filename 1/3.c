@@ -1,8 +1,6 @@
 #include "msp.h"
 
 void delay_ms(uint32_t delay);
-void delay_10ms(uint32_t delay);
-void delay_10us(uint32_t delay);
 
 int main(void) {
 	P2->SEL1 &= ~0x02;
