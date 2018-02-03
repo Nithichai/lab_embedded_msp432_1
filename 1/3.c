@@ -12,7 +12,7 @@ int main(void) {
 		if (P2->OUT == 0x08) {
 			P2->OUT = 0x01;
 		}
-		delay_ms(1000);
+		delay_ms(2000);
 	}
 }
 
